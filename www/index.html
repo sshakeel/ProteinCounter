@@ -6,8 +6,14 @@
     <title></title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <!-- Materlized Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css">
+    <link href="css/protein.css" rel="stylesheet">
 
+    <!-- Materlized Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
@@ -20,12 +26,34 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
   </head>
-  <body ng-app="starter">
+  <body ng-app="protein">
 
     <ion-pane>
       <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
+        <h1 class="title">Protein Intake Calculator</h1>
+        <form action="">
+          <div class="input-field clearfix">
+            <input id="weight" type="text">
+            <label for="weight">Desired Weight</label>
+            <!-- <select name="" id="">
+              <option value="kg">kg</option>
+              <option value="lbs">lbs</option>
+            </select> -->
+          </div>
+          <div class="input-field clearfix">
+            <select name="" id="style">
+              <option value="1">Body Building</option>
+              <option value="2">Power and Speed</option>
+              <option value="3">Dieting</option>
+              <option value="4">Endurance</option>
+              <option value="5">Truama Recovery</option>
+              <option value="6">Stressed</option>
+            </select>
+            <label for="style">Life Style/Goal</label>
+          </div>
+        </form>
       </ion-header-bar>
       <ion-content>
       </ion-content>
