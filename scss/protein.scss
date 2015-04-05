@@ -13,7 +13,8 @@ $border: #B6B6B6;
 
 body{
 	font-family: 'Roboto', sans-serif !important;
-
+	background-color: $primary-dark;
+	color: $text;
 	& *{
 		-webkit-transition: all 0.5s ease;
 		-moz-transition: all 0.5s ease;
@@ -26,33 +27,32 @@ body{
 .bar.bar-stable{
 	background-image: none;
 	background: none;
-	background-color: $primary-dark;
-	color: $text;
-
-	height: 320px;
+	
+	
 
 	border: 0;
 
 	.title{
-		color: $primary-light;
+		color: $text;
 		font-size: 36px;
 		text-align: center;
 		margin: 36px 0;
 		
 	}
 }
-
+.pane, .view{
+	background-color: $primary-dark;
+}
 form{
 	min-width: 320px;
 	max-width: 100%;
 	display: block;
 	margin: 80px auto 0 auto;
 
-	input[type="text"], select, select option{
+	input[type="text"], input[type="number"], select, select option, input{
 
 		height: 52px;
-		width: 90%;
-		float: right;
+		width: 100%;
 		padding: 0;
 		margin: 0;
 		font-size: 36px;
@@ -60,16 +60,33 @@ form{
 		background: transparent;
 		color: $border;
 		border-bottom: 1px solid $primary;
+		text-align: center;
 
 		&:focus{
 			border-bottom: 1px solid $text;
 			color: $text;
 		}
+
+
+	}
+	select, select option{
+		text-indent: 20%;
 	}
 	select{
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		appearance: none;
+	}
+
+	.result{
+		height: 52px;
+		width: 100%;
+		font-size: 36px;
+		padding: 20px;
+  		text-align: center;
+	}
+	.input-field, .result{
+		margin: 20px 0;
 	}
 
 }
